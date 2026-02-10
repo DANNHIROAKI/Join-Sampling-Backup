@@ -1,6 +1,4 @@
-# Join Sampling (SJS v3-aligned)
-
-This repository contains a 2D implementation of **Spatial Join Sampling (SJS) v3**:
+# Join Sampling 2D Version
 
 ## Implemented methods (Dim = 2)
 
