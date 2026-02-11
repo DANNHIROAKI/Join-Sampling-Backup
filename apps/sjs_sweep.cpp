@@ -150,6 +150,12 @@ inline std::string FormatSci(double x, int prec = 3) {
   return s;
 }
 
+inline std::string FirstLine(std::string_view s) {
+  const size_t pos = s.find_first_of("\r\n");
+  if (pos == std::string_view::npos) return std::string(s);
+  return std::string(s.substr(0, pos));
+}
+
 }  // namespace
 
 // --------------------------
@@ -372,6 +378,7 @@ inline std::vector<std::string> RawHeader() {
       "rep",
       "seed",
       "ok",
+      "error",
       "wall_ms",
       "count_value",
       "count_exact",
@@ -1253,8 +1260,69 @@ sjs::apps::ResolveDatasetPathsFromSweep(fs::path(sweep_path), &spec.base);
                 std::string b_err;
                 auto baseline = sjs::baselines::CreateBaseline2D(method, variant, &b_err);
                 if (!baseline) {
-                  SJS_LOG_ERROR("CreateBaseline2D failed: ", b_err);
-                  return 7;
+                  // Do NOT abort the whole sweep: record the failure and continue.
+                  SJS_LOG_ERROR("CreateBaseline2D failed (skipping this combo): ", b_err);
+
+                  const double nan = std::numeric_limits<double>::quiet_NaN();
+                  const std::string err_one_line = sjs::apps::FirstLine(b_err);
+                  const std::string note = "unsupported baseline (skipped)";
+
+                  // Emit one raw row per would-have-been repeat/seed so downstream
+                  // scripts can see the failure.
+                  for (usize i = 0; i < seeds.size(); ++i) {
+                    const u64 seed = seeds[i];
+                    total_runs++;
+
+                    raw_writer.WriteRowV(
+                        ds.name,
+                        (cfg.dataset.source == sjs::DataSource::Synthetic ? cfg.dataset.synthetic.generator : ""),
+                        (cfg.dataset.source == sjs::DataSource::Synthetic ? cfg.dataset.synthetic.alpha
+                                                                          : nan),
+                        static_cast<unsigned long long>(ds.R.Size()),
+                        static_cast<unsigned long long>(ds.S.Size()),
+                        sjs::ToString(method),
+                        sjs::ToString(variant),
+                        static_cast<unsigned long long>(t),
+                        static_cast<unsigned long long>(i),
+                        static_cast<unsigned long long>(seed),
+                        0,
+                        err_one_line,
+                        nan,
+                        nan,
+                        0,
+                        0,
+                        0,
+                        static_cast<unsigned long long>(cfg.run.enum_cap),
+                        "",
+                        0ULL,
+                        "{}",
+                        note,
+                        cfg.ToJsonLite(),
+                        (gen_report_ptr ? gen_report_ptr->ToJsonLite() : "{}"));
+                  }
+
+                  // Emit a summary row with sentinel stats.
+                  sum_writer.WriteRowV(
+                      ds.name,
+                      (cfg.dataset.source == sjs::DataSource::Synthetic ? cfg.dataset.synthetic.generator : ""),
+                      (cfg.dataset.source == sjs::DataSource::Synthetic ? cfg.dataset.synthetic.alpha
+                                                                        : nan),
+                      static_cast<unsigned long long>(ds.R.Size()),
+                      static_cast<unsigned long long>(ds.S.Size()),
+                      sjs::ToString(method),
+                      sjs::ToString(variant),
+                      static_cast<unsigned long long>(t),
+                      static_cast<unsigned long long>(seeds.size()),
+                      0.0,   // ok_rate
+                      -1.0,  // wall_mean_ms
+                      -1.0,  // wall_stdev_ms
+                      -1.0,  // wall_median_ms
+                      -1.0,  // wall_p95_ms
+                      -1.0,  // count_mean
+                      -1.0,  // count_stdev
+                      0.0,   // exact_frac
+                      ("unsupported baseline: " + err_one_line));
+                  continue;
                 }
 
                 // Collect per-repeat stats.
@@ -1317,6 +1385,7 @@ sjs::apps::ResolveDatasetPathsFromSweep(fs::path(sweep_path), &spec.base);
                       static_cast<unsigned long long>(i),
                       static_cast<unsigned long long>(seed),
                       (rep_out.ok ? 1 : 0),
+                      sjs::apps::FirstLine(rep_out.error),
                       wms,
                       count_value,
                       ((rep_out.ok && rep_out.count.exact) ? 1 : 0),
