@@ -1,0 +1,8 @@
+2026-02-22 04:30:34.727 [INFO] Generated dataset: d2_stripe_n200000_a200_gs1 R= 200000 S= 200000 gen= stripe report= {"generator":"stripe_ctrl_alpha","dataset":"d2_stripe_n200000_a200_gs1","n_r":200000,"n_s":200000,"has_exact_k":true,"k_target":80000000,"k_achieved":80000000,"alpha_target":200,"alpha_achieved":200,"notes":"control_axis=1, core=[0.45,0.55], g=4.99998e-07, h=4.5e-06, delta=1.24999e-07, shuffle_strips=1, shuffle_r=0, k_overridden=0"}
+2026-02-22 04:30:34.727 [INFO] Baseline: ours_enum+sampling method= ours variant= enum_sampling
+2026-02-22 04:30:36.691 [INFO] Run ok (rep= 0 ) wall_ms= 1964.35 count= 8e+07 (exact) samples= 100000
+2026-02-22 04:30:38.343 [INFO] Run ok (rep= 1 ) wall_ms= 1651.15 count= 8e+07 (exact) samples= 100000
+2026-02-22 04:30:39.967 [INFO] Run ok (rep= 2 ) wall_ms= 1624.64 count= 8e+07 (exact) samples= 100000
+2026-02-22 04:30:39.967 [INFO] Wall-time summary (ms) [all]: {"n":3,"mean":1746.71,"stdev":188.945,"sem":109.087,"min":1624.64,"max":1964.35,"median":1651.15,"p90":1901.71,"p95":1933.03,"p99":1958.09}
+2026-02-22 04:30:39.967 [INFO] Wall-time summary (ms) [ok-only]: {"n":3,"mean":1746.71,"stdev":188.945,"sem":109.087,"min":1624.64,"max":1964.35,"median":1651.15,"p90":1901.71,"p95":1933.03,"p99":1958.09} ok_rate= 1
+2026-02-22 04:30:39.967 [INFO] Wrote results to: /home/dhy/PhD/SJS-2D/run/temp/exp2_synth_d2/out/B_N/B_N__n200000__a200__t100000__ours__enum_sampling/run.csv

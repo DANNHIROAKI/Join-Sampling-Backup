@@ -1,5 +1,6 @@
 # ============================================================================
-# SJS - .gitignore
+# SJS-2D - .gitignore
+# Core code + experiment results, no build / cache / temp.
 # ============================================================================
 
 # ----------------------------------------------------------------------------
@@ -21,7 +22,7 @@ install_manifest.txt
 CTestTestfile.cmake
 Testing/
 
-# Compilation
+# Compilation outputs
 compile_commands.json
 *.o
 *.obj
@@ -36,16 +37,14 @@ compile_commands.json
 *.app
 
 # ----------------------------------------------------------------------------
-# Experimental results & outputs
+# Runtime temp / scratch (can be regenerated)
 # ----------------------------------------------------------------------------
-output/
-*.csv
-*.log
+run/temp/
+nohup.out
 log
-run.log
 
 # ----------------------------------------------------------------------------
-# Generated data
+# Generated data (reproducible synthetic datasets, not experiment results)
 # ----------------------------------------------------------------------------
 data/synthetic/
 *.bin
