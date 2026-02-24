@@ -1,5 +1,4 @@
 # Code-only repo: ignore generated artifacts, keep implementation sources.
-
 # Build outputs (CMake and local build dirs)
 /build/
 /build_local/
@@ -97,3 +96,9 @@ Thumbs.db
 ehthumbs.db
 Desktop.ini
 .cache/
+
+# Special requirements
+README.md
+README.txt
+README
+REDAME*
