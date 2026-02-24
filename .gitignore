@@ -1,19 +1,21 @@
-# Code-only repo: ignore all generated artifacts.
+# Code-only repo: ignore generated artifacts, keep implementation sources.
 
-# Build artifacts
+# Build outputs (CMake and local build dirs)
 /build/
 /build_local/
 /cmake-build-*/
-**/CMakeFiles/
+CMakeFiles/
 CMakeCache.txt
 cmake_install.cmake
 CTestTestfile.cmake
 compile_commands.json
 install_manifest.txt
-Makefile
 Testing/
+build.ninja
+.ninja_*
+*.ninja
 
-# Compiled outputs
+# Native binaries/libraries/objects
 *.o
 *.obj
 *.a
@@ -26,41 +28,48 @@ Testing/
 *.out
 *.app
 *.pdb
+*.dSYM/
 
 # Coverage / profiling
 *.gcda
 *.gcno
+*.gcov
 *.profraw
 *.profdata
 *.coverage
+coverage/
+htmlcov/
 
-# Runtime / temp / intermediate
+# Runtime / temp / intermediate files
 /run/temp/
 /tmp/
+/log
 nohup.out
 *.pid
 *.tmp
 *.temp
 *.bak
-/log
 *.log
 
-# Experimental outputs and generated datasets
+# Experiment outputs
 /results/
-/data/real/
-/data/synthetic/
-*.bin
-*.dat
-DONE
-gen_report.json
-gen.log
+*.meta
+*.ok
+*.exit
+/DONE
+/gen_report.json
+/gen.log
 
-# Python cache / virtual environments
+# Generated datasets (keep placeholders)
+data/real/*
+!data/real/.gitkeep
+data/synthetic/*
+!data/synthetic/.gitkeep
+
+# Python cache / environments
 __pycache__/
 *.py[cod]
 *$py.class
-*.pyo
-.Python
 .venv/
 venv/
 env/
@@ -81,7 +90,7 @@ pip-wheel-metadata/
 .settings/
 *.sublime-*
 
-# OS files
+# OS junk
 .DS_Store
 .DS_Store?
 Thumbs.db
