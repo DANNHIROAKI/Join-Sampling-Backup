@@ -1,35 +1,19 @@
-# ============================================================================
-# SJS-2D - .gitignore
-# Core code + experiment results, no build / cache / temp.
-# ============================================================================
+# Code-only repo: ignore all generated artifacts.
 
-# ----------------------------------------------------------------------------
 # Build artifacts
-# ----------------------------------------------------------------------------
-build/
-cmake-build-*/
-**/build/
-
-# Generic out directories (build / temp), but keep results/ outputs below
-out/
-
-# Keep experiment outputs even if they live in "out/" under results/
-!results/**/out/
-!results/**/out/**
-
-# CMake
-CMakeFiles/
+/build/
+/build_local/
+/cmake-build-*/
+**/CMakeFiles/
 CMakeCache.txt
 cmake_install.cmake
-*.cmake
-!CMakeLists.txt
-Makefile
-install_manifest.txt
 CTestTestfile.cmake
+compile_commands.json
+install_manifest.txt
+Makefile
 Testing/
 
-# Compilation outputs
-compile_commands.json
+# Compiled outputs
 *.o
 *.obj
 *.a
@@ -39,46 +23,55 @@ compile_commands.json
 *.dylib
 *.dll
 *.exe
-*.out 
+*.out
 *.app
+*.pdb
 
-# ----------------------------------------------------------------------------
-# Runtime temp / scratch (can be regenerated)
-# ----------------------------------------------------------------------------
-run/temp/
+# Coverage / profiling
+*.gcda
+*.gcno
+*.profraw
+*.profdata
+*.coverage
+
+# Runtime / temp / intermediate
+/run/temp/
+/tmp/
 nohup.out
-log
+*.pid
+*.tmp
+*.temp
+*.bak
+/log
+*.log
 
-# ----------------------------------------------------------------------------
-# Generated data (reproducible synthetic datasets, not experiment results)
-# ----------------------------------------------------------------------------
-data/synthetic/
+# Experimental outputs and generated datasets
+/results/
+/data/real/
+/data/synthetic/
 *.bin
 *.dat
 DONE
 gen_report.json
 gen.log
 
-# ----------------------------------------------------------------------------
-# Python (if any scripts)
-# ----------------------------------------------------------------------------
+# Python cache / virtual environments
 __pycache__/
 *.py[cod]
 *$py.class
 *.pyo
 .Python
-venv/
 .venv/
+venv/
 env/
 .env/
 *.egg-info/
 .eggs/
 dist/
 *.whl
+pip-wheel-metadata/
 
-# ----------------------------------------------------------------------------
 # IDE / Editor
-# ----------------------------------------------------------------------------
 .vscode/
 .idea/
 *.swp
@@ -88,15 +81,10 @@ dist/
 .settings/
 *.sublime-*
 
-# ----------------------------------------------------------------------------
-# OS / Misc
-# ----------------------------------------------------------------------------
+# OS files
 .DS_Store
 .DS_Store?
 Thumbs.db
 ehthumbs.db
 Desktop.ini
-*.bak
-*.tmp
-*.temp
 .cache/
