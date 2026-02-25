@@ -146,6 +146,10 @@ int main(int argc, char** argv) {
     return 3;
   }
 
+  // Some generators may leave ds.name empty; keep output filenames stable.
+  if (ds.name.empty()) ds.name = spec.name.empty() ? cfg.dataset.name : spec.name;
+  if (ds.name.empty()) ds.name = "synthetic";
+
   SJS_LOG_INFO("Generated dataset:", ds.name,
                "R=", static_cast<unsigned long long>(ds.R.Size()),
                "S=", static_cast<unsigned long long>(ds.S.Size()),
