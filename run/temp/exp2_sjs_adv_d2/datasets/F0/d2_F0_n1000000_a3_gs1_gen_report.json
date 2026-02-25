@@ -1,0 +1,1 @@
+{"generator":"alacarte_rectgen","dataset":"d2_F0_n1000000_a3_gs1","n_r":1000000,"n_s":1000000,"has_exact_k":false,"k_target":0,"k_achieved":0,"alpha_target":3,"alpha_achieved":4.25,"notes":"alacarte-local alpha_expected_est=3.00368 coverage=1.5 pair_p_est=6.00735e-06 alpha_hat_est=4.25 epsilon_alpha=0.416667 audit_pairs=2000000"}

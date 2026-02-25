@@ -1,0 +1,8 @@
+2026-02-24 12:45:25.527 [INFO] Loaded dataset: d2_F1_n1000000_a300_gs1 R= 1000000 S= 1000000
+2026-02-24 12:45:25.527 [INFO] Baseline: ours_enum+sampling method= ours variant= enum_sampling
+2026-02-24 12:45:42.645 [INFO] Run ok (rep= 0 ) wall_ms= 17117.7 count= 5.97164e+08 (exact) samples= 10000000
+2026-02-24 12:45:58.006 [INFO] Run ok (rep= 1 ) wall_ms= 15359.1 count= 5.97164e+08 (exact) samples= 10000000
+2026-02-24 12:46:13.412 [INFO] Run ok (rep= 2 ) wall_ms= 15403.1 count= 5.97164e+08 (exact) samples= 10000000
+2026-02-24 12:46:13.415 [INFO] Wall-time summary (ms) [all]: {"n":3,"mean":15960,"stdev":1002.87,"sem":579.006,"min":15359.1,"max":17117.7,"median":15403.1,"p90":16774.8,"p95":16946.2,"p99":17083.4}
+2026-02-24 12:46:13.415 [INFO] Wall-time summary (ms) [ok-only]: {"n":3,"mean":15960,"stdev":1002.87,"sem":579.006,"min":15359.1,"max":17117.7,"median":15403.1,"p90":16774.8,"p95":16946.2,"p99":17083.4} ok_rate= 1
+2026-02-24 12:46:13.415 [INFO] Wrote results to: /home/dhy/PhD/Comp-26.2.23/Join-Sampling-2D/run/temp/exp2_sjs_adv_d2/out/A_alpha_F1/A_alpha_F1__F1__n1000000__a300__t10000000__ours__enum_sampling__B50000000__w512/run.csv

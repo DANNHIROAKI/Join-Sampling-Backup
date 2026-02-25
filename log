@@ -1,0 +1,77 @@
+nohup: ignoring input
+[run.sh] Repo root  : /home/dhy/PhD/Comp-26.2.23/Join-Sampling-2D
+[run.sh] Build type : Release
+[run.sh] Build dir  : /home/dhy/PhD/Comp-26.2.23/Join-Sampling-2D/build/release
+[run.sh] Temp dir   : /home/dhy/PhD/Comp-26.2.23/Join-Sampling-2D/run/temp/exp2_sjs_adv_d2
+[run.sh] Results dir: /home/dhy/PhD/Comp-26.2.23/Join-Sampling-2D/results/raw/exp2_sjs_adv_d2
+[run.sh] Building... (JOBS=16)
+[ 53%] Built target sjs
+[ 58%] Built target sjs_run
+[ 62%] Built target sjs_test_join_oracle
+[ 67%] Built target sjs_test_baselines_smoke
+[ 72%] Built target sjs_test_geometry
+[ 81%] Built target sjs_test_event_sweep
+[ 81%] Built target sjs_test_write_results
+[ 86%] Built target sjs_test_sampling_quality
+[ 95%] Built target sjs_verify
+[ 95%] Built target sjs_sweep
+[100%] Built target sjs_gen_dataset
+[run.sh] Using sjs_run        : /home/dhy/PhD/Comp-26.2.23/Join-Sampling-2D/build/release/sjs_run
+[run.sh] Using sjs_gen_dataset: /home/dhy/PhD/Comp-26.2.23/Join-Sampling-2D/build/release/sjs_gen_dataset
+[run.sh] Host: nproc=128, mem~1008GB
+[run.sh] Parallelism: max=8 (A=8, B_small=2, B_large=1, C_small=3, C_large=1, D=8, E=8, F=1)
+[run.sh] Auto-parallel knobs: cap=8, mem_per_task_gb=24, mem_reserve_gb=8
+[run.sh] Run signature: 3061775221-937
+[run.sh] Rectgen preset scripts:
+[run.sh]   F0: /home/dhy/PhD/Comp-26.2.23/Join-Sampling-2D/run/temp/exp2_sjs_adv_d2/rectgen_presets/alacarte_rectgen_F0.py
+[run.sh]   F1: /home/dhy/PhD/Comp-26.2.23/Join-Sampling-2D/run/temp/exp2_sjs_adv_d2/rectgen_presets/alacarte_rectgen_F1.py
+[run.sh] Generating task manifests...
+[run.sh] Task counts: A=126, B_small=28, B_large=14, C_small=21, C_large=28, D=14, E=98, F=15 (total=344)
+[run.sh] Pre-generating datasets (unique count=27)...
+[run.sh] [dataset] Generating d2_F0_n1000000_a0p1_gs1 (fam=F0 N=1000000 alpha=0.1)
+[run.sh] [dataset] Generating d2_F1_n1000000_a0p1_gs1 (fam=F1 N=1000000 alpha=0.1)
+[run.sh] [dataset] Generating d2_F0_n1000000_a0p3_gs1 (fam=F0 N=1000000 alpha=0.3)
+[run.sh] [dataset] Generating d2_F1_n1000000_a0p3_gs1 (fam=F1 N=1000000 alpha=0.3)
+[run.sh] [dataset] Generating d2_F0_n1000000_a1_gs1 (fam=F0 N=1000000 alpha=1)
+[run.sh] [dataset] Generating d2_F1_n1000000_a1_gs1 (fam=F1 N=1000000 alpha=1)
+[run.sh] [dataset] Generating d2_F0_n1000000_a3_gs1 (fam=F0 N=1000000 alpha=3)
+[run.sh] [dataset] Generating d2_F1_n1000000_a3_gs1 (fam=F1 N=1000000 alpha=3)
+[run.sh] [dataset] Generating d2_F0_n1000000_a10_gs1 (fam=F0 N=1000000 alpha=10)
+[run.sh] [dataset] Generating d2_F1_n1000000_a10_gs1 (fam=F1 N=1000000 alpha=10)
+[run.sh] [dataset] Generating d2_F0_n1000000_a30_gs1 (fam=F0 N=1000000 alpha=30)
+[run.sh] [dataset] Generating d2_F1_n1000000_a30_gs1 (fam=F1 N=1000000 alpha=30)
+[run.sh] [dataset] Generating d2_F0_n1000000_a100_gs1 (fam=F0 N=1000000 alpha=100)
+[run.sh] [dataset] Generating d2_F1_n1000000_a100_gs1 (fam=F1 N=1000000 alpha=100)
+[run.sh] [dataset] Generating d2_F0_n1000000_a300_gs1 (fam=F0 N=1000000 alpha=300)
+[run.sh] [dataset] Generating d2_F1_n1000000_a300_gs1 (fam=F1 N=1000000 alpha=300)
+[run.sh] [dataset] Generating d2_F0_n1000000_a1000_gs1 (fam=F0 N=1000000 alpha=1000)
+[run.sh] [dataset] Generating d2_F1_n1000000_a1000_gs1 (fam=F1 N=1000000 alpha=1000)
+[run.sh] [dataset] Generating d2_F0_n100000_a200_gs1 (fam=F0 N=100000 alpha=200)
+[run.sh] [dataset] Generating d2_F0_n200000_a200_gs1 (fam=F0 N=200000 alpha=200)
+[run.sh] [dataset] Generating d2_F0_n500000_a200_gs1 (fam=F0 N=500000 alpha=200)
+[run.sh] [dataset] Generating d2_F0_n1000000_a200_gs1 (fam=F0 N=1000000 alpha=200)
+[run.sh] [dataset] Generating d2_F0_n2000000_a200_gs1 (fam=F0 N=2000000 alpha=200)
+[run.sh] [dataset] Generating d2_F0_n5000000_a200_gs1 (fam=F0 N=5000000 alpha=200)
+[run.sh] [dataset] Generating d2_F1_n1000000_a200_gs1 (fam=F1 N=1000000 alpha=200)
+[run.sh] [dataset] Generating d2_F0_n1000000_a3000_gs1 (fam=F0 N=1000000 alpha=3000)
+[run.sh] [dataset] Generating d2_F0_n1000000_a10000_gs1 (fam=F0 N=1000000 alpha=10000)
+[run.sh] All datasets are ready.
+[run.sh] Running tasks: tasks_A_alpha.tsv (attempt=0, parallel=8, force=0)
+[run.sh] A_alpha: all tasks OK
+[run.sh] Running tasks: tasks_B_N_small.tsv (attempt=0, parallel=2, force=0)
+[run.sh] B_N_small: all tasks OK
+[run.sh] Running tasks: tasks_B_N_large.tsv (attempt=0, parallel=1, force=0)
+[run.sh] B_N_large: all tasks OK
+[run.sh] Running tasks: tasks_C_t_small.tsv (attempt=0, parallel=3, force=0)
+[run.sh] C_t_small: all tasks OK
+[run.sh] Running tasks: tasks_C_t_large.tsv (attempt=0, parallel=1, force=0)
+[run.sh] C_t_large: all tasks OK
+[run.sh] Running tasks: tasks_D_family.tsv (attempt=0, parallel=8, force=0)
+[run.sh] D_family: all tasks OK
+[run.sh] Running tasks: tasks_E_budget.tsv (attempt=0, parallel=8, force=0)
+[run.sh] E_budget: all tasks OK
+[run.sh] Running tasks: tasks_F_high_alpha.tsv (attempt=0, parallel=1, force=0)
+[run.sh] F_high_alpha: all tasks OK
+[run.sh] Synced results to: /home/dhy/PhD/Comp-26.2.23/Join-Sampling-2D/results/raw/exp2_sjs_adv_d2
+[run.sh] Merged CSVs under: /home/dhy/PhD/Comp-26.2.23/Join-Sampling-2D/results/raw/exp2_sjs_adv_d2/manifest/merged/
+[run.sh] All tasks completed successfully.

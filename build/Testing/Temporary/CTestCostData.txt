@@ -1,0 +1,7 @@
+sjs_test_geometry 1 0.00239767
+sjs_test_event_sweep 1 0.00231813
+sjs_test_join_oracle 1 0.00238013
+sjs_test_sampling_quality 1 0.00252245
+sjs_test_baselines_smoke 1 0.153123
+sjs_test_write_results 1 0.00265317
+---

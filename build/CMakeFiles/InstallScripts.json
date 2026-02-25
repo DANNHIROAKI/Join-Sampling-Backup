@@ -1,0 +1,9 @@
+{
+	"InstallScripts" : 
+	[
+		"/home/dhy/PhD/Comp-26.2.23/SJS-2D/build/cmake_install.cmake",
+		"/home/dhy/PhD/Comp-26.2.23/SJS-2D/build/src/cmake_install.cmake",
+		"/home/dhy/PhD/Comp-26.2.23/SJS-2D/build/tests/cmake_install.cmake"
+	],
+	"Parallel" : false
+}

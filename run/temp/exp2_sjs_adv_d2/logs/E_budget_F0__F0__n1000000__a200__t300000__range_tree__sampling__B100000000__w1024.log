@@ -1,0 +1,8 @@
+2026-02-24 18:01:24.714 [INFO] Loaded dataset: d2_F0_n1000000_a200_gs1 R= 1000000 S= 1000000
+2026-02-24 18:01:24.714 [INFO] Baseline: range_tree_sampling method= range_tree variant= sampling
+2026-02-24 18:02:20.531 [INFO] Run ok (rep= 0 ) wall_ms= 55817.2 count= 3.96399e+08 (exact) samples= 300000
+2026-02-24 18:03:15.105 [INFO] Run ok (rep= 1 ) wall_ms= 54573.9 count= 3.96399e+08 (exact) samples= 300000
+2026-02-24 18:04:09.401 [INFO] Run ok (rep= 2 ) wall_ms= 54295.7 count= 3.96399e+08 (exact) samples= 300000
+2026-02-24 18:04:09.401 [INFO] Wall-time summary (ms) [all]: {"n":3,"mean":54895.6,"stdev":810.131,"sem":467.729,"min":54295.7,"max":55817.2,"median":54573.9,"p90":55568.5,"p95":55692.8,"p99":55792.3}
+2026-02-24 18:04:09.401 [INFO] Wall-time summary (ms) [ok-only]: {"n":3,"mean":54895.6,"stdev":810.131,"sem":467.729,"min":54295.7,"max":55817.2,"median":54573.9,"p90":55568.5,"p95":55692.8,"p99":55792.3} ok_rate= 1
+2026-02-24 18:04:09.401 [INFO] Wrote results to: /home/dhy/PhD/Comp-26.2.23/Join-Sampling-2D/run/temp/exp2_sjs_adv_d2/out/E_budget_F0/E_budget_F0__F0__n1000000__a200__t300000__range_tree__sampling__B100000000__w1024/run.csv

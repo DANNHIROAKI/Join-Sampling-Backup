@@ -1,0 +1,10 @@
+run_signature=3061775221-937
+family=F0
+N=1000000
+alpha=10
+gen_seed=1
+gen=alacarte_rectgen
+rectgen_script=/home/dhy/PhD/Comp-26.2.23/Join-Sampling-2D/run/temp/exp2_sjs_adv_d2/rectgen_presets/alacarte_rectgen_F0.py
+alacarte_module=/home/dhy/PhD/Comp-26.2.23/Join-Sampling-2D/Alacarte/alacarte_rectgen.py
+audit_pairs=2000000
+audit_seed=1

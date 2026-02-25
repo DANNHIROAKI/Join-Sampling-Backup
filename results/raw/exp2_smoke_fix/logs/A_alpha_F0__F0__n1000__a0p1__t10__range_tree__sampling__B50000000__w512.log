@@ -1,0 +1,6 @@
+2026-02-24 12:26:25.651 [INFO] Loaded dataset: d2_F0_n1000_a0p1_gs1 R= 1000 S= 1000
+2026-02-24 12:26:25.651 [INFO] Baseline: range_tree_sampling method= range_tree variant= sampling
+2026-02-24 12:26:25.661 [INFO] Run ok (rep= 0 ) wall_ms= 9.7796 count= 205 (exact) samples= 10
+2026-02-24 12:26:25.661 [INFO] Wall-time summary (ms) [all]: {"n":1,"mean":9.7796,"stdev":0,"sem":0,"min":9.7796,"max":9.7796,"median":9.7796,"p90":9.7796,"p95":9.7796,"p99":9.7796}
+2026-02-24 12:26:25.661 [INFO] Wall-time summary (ms) [ok-only]: {"n":1,"mean":9.7796,"stdev":0,"sem":0,"min":9.7796,"max":9.7796,"median":9.7796,"p90":9.7796,"p95":9.7796,"p99":9.7796} ok_rate= 1
+2026-02-24 12:26:25.661 [INFO] Wrote results to: /home/dhy/PhD/Comp-26.2.23/Join-Sampling-2D/run/temp/exp2_smoke_fix/out/A_alpha_F0/A_alpha_F0__F0__n1000__a0p1__t10__range_tree__sampling__B50000000__w512/run.csv

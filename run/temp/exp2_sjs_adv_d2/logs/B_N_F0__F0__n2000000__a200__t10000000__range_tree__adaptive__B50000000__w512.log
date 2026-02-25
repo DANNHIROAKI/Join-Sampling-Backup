@@ -1,0 +1,8 @@
+2026-02-24 13:36:47.909 [INFO] Loaded dataset: d2_F0_n2000000_a200_gs1 R= 2000000 S= 2000000
+2026-02-24 13:36:47.910 [INFO] Baseline: range_tree_adaptive method= range_tree variant= adaptive
+2026-02-24 13:39:41.250 [INFO] Run ok (rep= 0 ) wall_ms= 173340 count= 8.05738e+08 (exact) samples= 10000000
+2026-02-24 13:42:31.896 [INFO] Run ok (rep= 1 ) wall_ms= 170644 count= 8.05738e+08 (exact) samples= 10000000
+2026-02-24 13:45:21.551 [INFO] Run ok (rep= 2 ) wall_ms= 169653 count= 8.05738e+08 (exact) samples= 10000000
+2026-02-24 13:45:21.552 [INFO] Wall-time summary (ms) [all]: {"n":3,"mean":171213,"stdev":1907.99,"sem":1101.58,"min":169653,"max":173340,"median":170644,"p90":172801,"p95":173071,"p99":173286}
+2026-02-24 13:45:21.552 [INFO] Wall-time summary (ms) [ok-only]: {"n":3,"mean":171213,"stdev":1907.99,"sem":1101.58,"min":169653,"max":173340,"median":170644,"p90":172801,"p95":173071,"p99":173286} ok_rate= 1
+2026-02-24 13:45:21.552 [INFO] Wrote results to: /home/dhy/PhD/Comp-26.2.23/Join-Sampling-2D/run/temp/exp2_sjs_adv_d2/out/B_N_F0/B_N_F0__F0__n2000000__a200__t10000000__range_tree__adaptive__B50000000__w512/run.csv

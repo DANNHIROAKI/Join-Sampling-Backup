@@ -1,0 +1,8 @@
+2026-02-24 06:12:26.874 [INFO] Generated dataset:  R= 1000000 S= 1000000 gen= alacarte_rectgen report= {"generator":"alacarte_rectgen","dataset":"d2_alacarte_rectgen_n1000000_a200_gs1","n_r":1000000,"n_s":1000000,"has_exact_k":false,"k_target":0,"k_achieved":0,"alpha_target":200,"alpha_achieved":207.75,"notes":"alacarte-rectgen alpha_expected_est=201.691 coverage=94.4273 pair_p_est=0.000403381 alpha_hat_est=207.75 epsilon_alpha=0.03875 audit_pairs=2000000"}
+2026-02-24 06:12:26.874 [INFO] Baseline: ours_adaptive method= ours variant= adaptive
+2026-02-24 06:13:30.410 [INFO] Run ok (rep= 0 ) wall_ms= 63536.1 count= 4.03242e+08 (exact) samples= 300000000
+2026-02-24 06:14:33.659 [INFO] Run ok (rep= 1 ) wall_ms= 63172.8 count= 4.03242e+08 (exact) samples= 300000000
+2026-02-24 06:15:36.615 [INFO] Run ok (rep= 2 ) wall_ms= 62894.8 count= 4.03242e+08 (exact) samples= 300000000
+2026-02-24 06:15:36.673 [INFO] Wall-time summary (ms) [all]: {"n":3,"mean":63201.2,"stdev":321.592,"sem":185.671,"min":62894.8,"max":63536.1,"median":63172.8,"p90":63463.4,"p95":63499.8,"p99":63528.8}
+2026-02-24 06:15:36.673 [INFO] Wall-time summary (ms) [ok-only]: {"n":3,"mean":63201.2,"stdev":321.592,"sem":185.671,"min":62894.8,"max":63536.1,"median":63172.8,"p90":63463.4,"p95":63499.8,"p99":63528.8} ok_rate= 1
+2026-02-24 06:15:36.673 [INFO] Wrote results to: /home/dhy/PhD/Comp-26.2.23/Join-Sampling-2D/run/temp/exp2_synth_d2/out/C_t/C_t__n1000000__a200__t300000000__ours__adaptive/run.csv

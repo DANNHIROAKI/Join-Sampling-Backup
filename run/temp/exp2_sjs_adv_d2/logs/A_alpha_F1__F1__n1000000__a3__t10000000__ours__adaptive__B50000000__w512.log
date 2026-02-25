@@ -1,0 +1,8 @@
+2026-02-24 12:34:36.588 [INFO] Loaded dataset: d2_F1_n1000000_a3_gs1 R= 1000000 S= 1000000
+2026-02-24 12:34:36.588 [INFO] Baseline: ours_adaptive method= ours variant= adaptive
+2026-02-24 12:34:43.732 [INFO] Run ok (rep= 0 ) wall_ms= 7143.9 count= 6.04623e+06 (exact) samples= 10000000
+2026-02-24 12:34:52.210 [INFO] Run ok (rep= 1 ) wall_ms= 8475.97 count= 6.04623e+06 (exact) samples= 10000000
+2026-02-24 12:35:00.703 [INFO] Run ok (rep= 2 ) wall_ms= 8490.35 count= 6.04623e+06 (exact) samples= 10000000
+2026-02-24 12:35:00.706 [INFO] Wall-time summary (ms) [all]: {"n":3,"mean":8036.74,"stdev":773.255,"sem":446.439,"min":7143.9,"max":8490.35,"median":8475.97,"p90":8487.47,"p95":8488.91,"p99":8490.06}
+2026-02-24 12:35:00.706 [INFO] Wall-time summary (ms) [ok-only]: {"n":3,"mean":8036.74,"stdev":773.255,"sem":446.439,"min":7143.9,"max":8490.35,"median":8475.97,"p90":8487.47,"p95":8488.91,"p99":8490.06} ok_rate= 1
+2026-02-24 12:35:00.706 [INFO] Wrote results to: /home/dhy/PhD/Comp-26.2.23/Join-Sampling-2D/run/temp/exp2_sjs_adv_d2/out/A_alpha_F1/A_alpha_F1__F1__n1000000__a3__t10000000__ours__adaptive__B50000000__w512/run.csv
